@@ -1,0 +1,2 @@
+export const CHANGE_USER_DATA = "CHANGE_USER_DATA";
+export const CHANGE_LIST_DATA = "CHANGE_LIST_DATA";
