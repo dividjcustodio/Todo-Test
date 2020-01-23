@@ -4,7 +4,7 @@ import { Button, Container, Card, TextField  } from '@material-ui/core';
 import { signInAction } from "../actions/user";
 import useStyles from "../assets/styles";
 
-function SignInPage({ signInAction, history }) {
+export function SignInPage({ signInAction, history }) {
   const classes = useStyles();
   const [data, dataSet] = React.useState({
     name: "",
@@ -23,6 +23,7 @@ function SignInPage({ signInAction, history }) {
       signInAction(data, history);
     }
   };
+
   return (
     <Container maxWidth="sm" className={classes.signInPage}>
       <Card className={classes.w100}>
@@ -38,7 +39,7 @@ function SignInPage({ signInAction, history }) {
             label="UserName"
           />
         </div>
-        <div  className={ `${classes.w100} ${classes.displayCenter} ${classes.mb50}`}>
+        <div className={ `${classes.w100} ${classes.displayCenter} ${classes.mb50}`}>
           <Button variant="contained" color="primary" onClick={onSubmit}>submit</Button>
         </div>
       </Card>

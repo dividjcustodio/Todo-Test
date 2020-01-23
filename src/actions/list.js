@@ -1,6 +1,6 @@
 import { CHANGE_LIST_DATA } from "./types";
-export const getDataStart = dispatch => {
-  fetch(`https://jsonplaceholder.typicode.com/todos`, {
+export const getDataStart = () => dispatch => {
+  return fetch(`https://jsonplaceholder.typicode.com/todos`, {
     method: "GET",
     mode: "cors",
     cache: "no-cache",

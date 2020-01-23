@@ -1,6 +1,6 @@
 import { CHANGE_USER_DATA } from "./types";
 
-export const signInAction = (data, history) => {
+export const signInAction = data => {
   window.sessionStorage.setItem("user", JSON.stringify(data));
 
   return {

@@ -4,7 +4,7 @@ import "../App.css";
 import { Container, Card  } from '@material-ui/core';
 import useStyles from "../assets/styles";
 
-function DetailPage({ match }) {
+export function DetailPage({ match }) {
   const classes = useStyles();
   const id = Number.isInteger(+match.params.id) ? match.params.id : 0;
 

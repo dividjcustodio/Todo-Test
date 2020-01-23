@@ -6,7 +6,7 @@ import { getDataStart } from "../actions/list";
 import useStyles from "../assets/styles";
 import Item from "../components/Item";
 
-function ListPage({ data, getData }) {
+export function ListPage({ data, getData }) {
   const classes = useStyles();
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ const mapStateToProps = store => ({
 });
 const dispatchToProps = dispatch => {
   return {
-    getData: () => getDataStart(dispatch)
+    getData: () => dispatch(getDataStart())
   };
 };
 

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>Pages --- Snapshot +++capturing Snapshot of Item 1`] = `"<li class=\\"MuiListItem-root MuiListItem-gutters\\" data-testid=\\"item\\"><a href=\\"/detail/1\\">some</a><div class=\\"MuiListItemText-root makeStyles-redFont-8 makeStyles-flexEnd-3\\"><span class=\\"MuiTypography-root MuiListItemText-primary MuiTypography-body1\\">no completed</span></div></li>"`;

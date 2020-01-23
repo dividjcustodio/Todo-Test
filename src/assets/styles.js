@@ -6,6 +6,11 @@ const displayCenter = {
   display: "flex"
 }
 
+const flexEnd = {
+  display: "flex",
+  justifyContent: "flex-end"
+}
+
 export default makeStyles(theme => ({
   signInPage: {
     ...displayCenter,
@@ -13,6 +18,7 @@ export default makeStyles(theme => ({
     height: "100vh",
   },
   displayCenter: displayCenter,
+  flexEnd: flexEnd,
 
   w100: {
     width: "100%"

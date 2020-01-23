@@ -1,18 +1,22 @@
 import React from "react";
 import "../App.css";
 import { ListItem, ListItemText  } from '@material-ui/core';
-import { useHistory } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import useStyles from "../assets/styles";
 
 function ItemComponent(item) {
   const classes = useStyles();
-  const history = useHistory();
   return (
-    <ListItem button onClick={ () => history.push(`/detail/${item.id}`)}>
-      <ListItemText primary={item.title} />
+    <ListItem data-testid="item">
+      <Link
+        key={`ind-${item.id}`}
+        to={`/detail/${item.id}`}
+      >
+        {item.title}
+      </Link>
       {item.completed ? 
-        <ListItemText className={classes.greenFont} primary="completed" />:
-        <ListItemText className={classes.redFont} primary="no completed" />
+        <ListItemText className={`${classes.greenFont} ${classes.flexEnd}`} primary="completed" />:
+        <ListItemText className={`${classes.redFont} ${classes.flexEnd}`} primary="no completed" />
       }
     </ListItem>
   );
